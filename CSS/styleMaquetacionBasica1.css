@@ -1,75 +1,64 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body{
-    height: 750px;
-    width: 750px;
-    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: #E9ECF4;
+    color: #000;
 }
 
-.header{
-    background-color: rgb(255, 153, 204);
-    padding: 40px 0px;
-    margin: 50px 50px 0px 50px;
+.contenedor {
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+}
+
+.contenedor > div{
     border: 2px solid #000000;
     border-radius: 10px;
+    padding: 20px;
 }
 
-.header p{
-    text-align: center;
+.contenedor .header{
+    background-color: rgb(255, 153, 204);
+    grid-column-start: 1;
+    grid-column-end: -1;
+    height: 80px;
 }
 
 .navigation{
     background-color: rgb(204, 255, 204);
-    padding: 250px 20px ;
-    margin: 10px 0px 0px 50px;
-    float: left;
-    border: 2px solid #000000;
-    border-radius: 10px;
-}
-
-.navigation p{
-    text-align: center;
-}
-
-.content{
-    background-color: rgb(204, 255, 255);
-    padding: 250px 147px ;
-    margin: 10px 0px 0px 10px;
-    float: left;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    display: block;
-}
-
-.content p{
-    text-align: center;
 }
 
 .linklist{
     background-color: rgb(204, 153, 255);
-    padding: 250px 20px ;
-    margin: 10px 50px 10px 10px;
-    float: right;
-    border: 2px solid #000000;
-    border-radius: 10px;
 }
 
-.linklist p{
-    text-align: center;
+.content{
+    background-color: rgb(204, 255, 255);
+    grid-column: 2/4;
+    grid-row: 2/3;
+    height: 400px;
 }
 
 .footer{
     background-color: rgb(255, 255, 153);
-    padding: 30px 20px ;
-    margin: 543px 50px 0px 50px;
-    border: 2px solid #000000;
-    border-radius: 10px;
+    grid-column: span 4;
 }
 
-.footer p{
+.contenedor .header,
+.contenedor .content,
+.contenedor .navigation,
+.contenedor .linklist,
+.contenedor .footer {
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
