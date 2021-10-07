@@ -25,7 +25,7 @@ body{
     padding: 20px;
 }
 
-.contenedor .header{
+.header{
     background-color: rgb(255, 153, 204);
     grid-column-start: 1;
     grid-column-end: -1;
